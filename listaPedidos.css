@@ -1,0 +1,10 @@
+.body_listaPedidos {
+    display: flex;
+    justify-content: center;
+}
+
+.card-header {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+}
