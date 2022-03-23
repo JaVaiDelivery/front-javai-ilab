@@ -1,0 +1,9 @@
+.card-header {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+}
+
+.card-body {
+    gap: 0.5rem;
+}
