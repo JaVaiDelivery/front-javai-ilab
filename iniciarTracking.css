@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.card-header {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+}
