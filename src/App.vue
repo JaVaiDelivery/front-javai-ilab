@@ -3,10 +3,22 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <header v-show="$route.name !=='login'">
+  <header v-show="$route.name !== 'login'">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <div class="navbar-brand">JaVai</div>
+        <button
+          v-show="$route.name === 'detalhesPedidos'"
+          class="btn"
+          type="button"
+          @click="$router.back()"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <div class="navbar-brand mx-auto">
+          <div v-show="$route.name === 'detalhesPedidos'">Pedido #{{$route.params.id}}</div>
+          <div v-show="$route.name === 'pedidos'">Pedidos</div>
+          
+        </div>
         <button
           class="btn"
           type="button"

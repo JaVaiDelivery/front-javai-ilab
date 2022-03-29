@@ -27,25 +27,25 @@
 
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Senha</label>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 form-control">
           <input
             :type="showPassword ? 'text' : 'password'"
-            class="form-control"
-            placeholder=""
-            aria-describedby="button-addon1"
+            style="border: none; max-width: 90%;"
           />
-          <div class="btn" @click="showPassword = !showPassword">
+          <span  @click="showPassword = !showPassword">
             <i v-show="!showPassword" class="bi-eye-slash"></i>
             <i v-show="showPassword" class="bi-eye"></i>
-          </div>
+          </span>
         </div>
       </div>
       <button v-show="!loading" type="submit" class="btn btn-primary">
         <span>Login</span>
       </button>
-      <div v-show="loading" class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
+      <div
+        v-show="loading"
+        class="spinner-border text-primary"
+        role="status"
+      ></div>
     </form>
   </div>
 </template>

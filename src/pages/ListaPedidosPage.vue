@@ -16,13 +16,13 @@
   </div>
 
   <div v-show="!loading && pedidos.length > 0">
-    <p class="text-center mt-5">Pedidos em aberto</p>
+    <p class="text-center mt-5"></p>
     <div class="card">
       <ul class="list-group list-group-flush">
-        <li v-for="pedido in pedidos" :key="pedido.id">
-          <router-link :to="`/pedidos/${pedido.id}`" class="list-group-item">
-            <div style="font-size: 1.2rem">
-              <strong>Pedido #{{ pedido.id }}</strong>
+        <li class="list-group-item" v-for="pedido in pedidos" :key="pedido.id">
+          <router-link :to="`/pedidos/${pedido.id}`">
+            <div class="fw-bold" style="font-size: 1.2rem">
+              Pedido #{{ pedido.id }}
             </div>
             <div class="text-muted" style="font-size: 0.9rem">
               {{ pedido.data_criacao }}
@@ -35,12 +35,12 @@
 </template>
 
 <script>
-import { pedidosEmAberto } from "../controllers/PedidoController";
+import PedidoController from "../controllers/PedidoController";
 import store from "../store";
 export default {
   async created() {
     this.loading = true;
-    const response = await pedidosEmAberto();
+    const response = await PedidoController.pedidosEmAberto();
     this.pedidos = response.data;
     this.loading = false;
   },
@@ -54,5 +54,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+a {
+  text-decoration: none;
+  color: black;
+}
 </style>
