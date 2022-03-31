@@ -25,11 +25,11 @@ Funcionalidades que o sistema oferece:
 - Consulta de pedidos em eberto
 - Atribuição de pedido pelo entregador
 - Alteração de status do pedido (EM_ABERTO/EM_ROTA/CONCLUIDO)
-- Consulta de geolocalização do pedido
+- Consulta de geolocalização do entregador
 - Criptografia de senhas
 - Validação de requisições
 - Documentação dos endpoints
-<!-- - Mensagens de erro customizadas *user friendly* -->
+- Mensagens de erro customizadas *user friendly*
 
 ## 🚀 Tecnologias
 
@@ -37,19 +37,10 @@ Tecnologias que utilizamos para desenvolver esta API Rest:
 
 - [Node.js](https://nodejs.org/)
 - [Vue.js](https://vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
 - [Bootstrap](https://getbootstrap.com/)
-<!-- - [Java](https://www.java.com/pt-BR/)
-- [Spring Boot](https://spring.io/)
-- [JWT](https://jwt.io/)
-- [Express.js](https://expressjs.com/pt-br/)
-- [TypeORM](https://typeorm.io/#/)
-- [Swagger](https://swagger.io/)
-- [Bcrypt](https://www.npmjs.com/package/bcrypt)
-- [Express Validator](https://express-validator.github.io/)
-- [Jest](https://jestjs.io/pt-BR/)
-- [Axios](https://github.com/axios/axios)
-- [Eslint](https://eslint.org/)
-- [SuperTest](https://www.npmjs.com/package/supertest) -->
+- [Popper.js](https://popper.js.org/)
+- [Vite.js](https://vitejs.dev/)
 
 ## 💻 Desenvolvedores
 - [Alessandra Lamas Luisi](https://github.com/alluisi)
@@ -118,11 +109,11 @@ Funcionalidades que o sistema oferece:
 - Consulta de pedidos em eberto
 - Atribuição de pedido pelo entregador
 - Alteração de status do pedido (EM_ABERTO/EM_ROTA/CONCLUIDO)
-- Consulta de geolocalização do pedido
+- Consulta de geolocalização do entregador
 - Criptografia de senhas
 - Validação de requisições
 - Documentação dos endpoints
-<!-- - Mensagens de erro customizadas *user friendly* -->
+- Mensagens de erro customizadas *user friendly*
 
 ## 🚀 Tecnologias
 
@@ -131,18 +122,7 @@ Tecnologias que utilizamos para desenvolver esta API Rest:
 - [Java](https://www.java.com/pt-BR/)
 - [Spring Boot](https://spring.io/)
 - [JWT](https://jwt.io/)
-<!-- - [Node.js](https://nodejs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Express.js](https://expressjs.com/pt-br/)
-- [TypeORM](https://typeorm.io/#/)
-- [Swagger](https://swagger.io/)
-- [Bcrypt](https://www.npmjs.com/package/bcrypt)
-- [Express Validator](https://express-validator.github.io/)
-- [Jest](https://jestjs.io/pt-BR/)
-- [Axios](https://github.com/axios/axios)
-- [Eslint](https://eslint.org/)
-- [SuperTest](https://www.npmjs.com/package/supertest) -->
+<!-- - [Swagger](https://swagger.io/) -->
 
 ## 💻 Desenvolvedores
 - [Alessandra Lamas Luisi](https://github.com/alluisi)
