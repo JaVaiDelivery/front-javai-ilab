@@ -29,6 +29,7 @@
         <label for="exampleInputPassword1" class="form-label">Senha</label>
         <div class="input-group mb-3 form-control">
           <input
+            v-model="password"
             :type="showPassword ? 'text' : 'password'"
             class="custom-input"
           />
