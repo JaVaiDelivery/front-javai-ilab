@@ -1,11 +1,12 @@
 import store from "../store"
+const BASE_URL = import.meta.env.VITE_API
 
 export default {
     pegarTodosEmAberto() {
-        return fetch('http://localhost:8080/pedidos')
+        return fetch(`${BASE_URL}/pedidos`)
     },
     pegarPedidoPorId(id) {
-        return fetch(`http://localhost:8080/pedidos/${id}`, {
+        return fetch(`${BASE_URL}/pedidos/${id}`, {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${store.state.user.token}`
@@ -14,7 +15,7 @@ export default {
     },
     controlarEntrega(idPedido, body) {
    
-        return fetch(`http://localhost:8080/pedidos/${idPedido}`, {
+        return fetch(`${BASE_URL}/pedidos/${idPedido}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +24,7 @@ export default {
         })
     },
     enviarLocalizacao(body) {
-        return fetch(`http://localhost:8080/geolocalizacao`, {
+        return fetch(`${BASE_URL}/geolocalizacao`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
