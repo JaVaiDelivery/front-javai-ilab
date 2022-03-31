@@ -1,14 +1,15 @@
 import AuthService from "../services/AuthService";
 
-export async function login(usuario, senha) {
+export async function login(email, senha) {
     try {
-        const response = await AuthService.login(usuario, senha)
+        const response = await AuthService.login(email, senha)
+        const result = await response.json()
         if(response.status == 200){
-            return { data: response }
+            return { data: result }
         }
         return {
             error: {
-                message: "Verifique usuário e/ou senha"
+                message: result.message
             }
         }
     } catch (error) {

@@ -1,5 +1,5 @@
 <template>
-  <div v-show="error" class="alert alert-danger" role="alert">
+  <div v-show="error" class="alert alert-danger mt-5" role="alert">
     {{ errorMsg }}
   </div>
   <div
@@ -30,9 +30,9 @@
         <div class="input-group mb-3 form-control">
           <input
             :type="showPassword ? 'text' : 'password'"
-            style="border: none; max-width: 90%;"
+            style="border: none; max-width: 90%"
           />
-          <span  @click="showPassword = !showPassword">
+          <span @click="showPassword = !showPassword">
             <i v-show="!showPassword" class="bi-eye-slash"></i>
             <i v-show="showPassword" class="bi-eye"></i>
           </span>
@@ -61,7 +61,7 @@ export default {
       loading: false,
       error: false,
       errorMsg: "",
-      email: "jhsd@nasdb",
+      email: "fernando@email.com.br",
       password: "123",
     };
   },
@@ -76,7 +76,12 @@ export default {
         return;
       }
       this.loading = false;
-      store.state.user = result.data;
+      const token = result.data.token.split(" ")[1];
+      const userDataBase64 = token.split(".")[1];
+      store.state.user = {
+        token,
+        data: JSON.parse(atob(userDataBase64))
+      };
       this.$router.replace({ name: "pedidos" });
     },
   },

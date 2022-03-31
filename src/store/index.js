@@ -1,5 +1,6 @@
 export default {
     state: {
-        user: null
+        user: null,
+        pedido: null
     }
 }

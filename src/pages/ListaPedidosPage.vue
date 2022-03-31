@@ -1,5 +1,5 @@
 <template>
-  <h4 class="my-4">Olá, {{ user.nome }}</h4>
+  <h4 class="my-4">Olá, {{beaultifyName( user.nome_entregador) }}</h4>
   <div
     v-show="loading"
     class="position-absolute top-50 start-50 translate-middle text-center"
@@ -25,7 +25,7 @@
               Pedido #{{ pedido.id }}
             </div>
             <div class="text-muted" style="font-size: 0.9rem">
-              {{ pedido.data_criacao }}
+              {{ beaultifyDate(pedido.data) }}
             </div>
           </router-link>
         </li>
@@ -47,9 +47,21 @@ export default {
   data() {
     return {
       pedidos: [],
-      user: store.state.user,
+      user: store.state.user.data,
       loading: false,
     };
+  },
+  methods: {
+    beaultifyName(name) {
+      const splitedName = name.split(" ")
+      return `${splitedName[0]} ${splitedName[1]}`
+    },
+
+    beaultifyDate(date) {
+      return new Intl.DateTimeFormat("pt-Br", { timeZone: "GMT" }).format(
+        new Date(date)
+      );
+    },
   },
 };
 </script>

@@ -1,5 +1,23 @@
-<script setup>
-import { RouterView } from "vue-router";
+<script>
+export default {
+  async created() {
+    if (!("geolocation" in navigator)) {
+      console.error("Navegador não compatível com geolocalização");
+    }
+  },
+
+  data() {
+    return {
+      showBanner: false,
+    };
+  },
+
+  methods: {
+    requestPermission(){
+      navigator.geolocation.getCurrentPosition(() => {})
+    }
+  }
+};
 </script>
 
 <template>
@@ -7,7 +25,9 @@ import { RouterView } from "vue-router";
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <button
-          v-show="$route.name === 'detalhesPedidos'"
+          v-show="
+            $route.name === 'detalhesPedidos' || $route.name === 'entregaPedido'
+          "
           class="btn"
           type="button"
           @click="$router.back()"
@@ -15,9 +35,15 @@ import { RouterView } from "vue-router";
           <i class="bi bi-arrow-left"></i>
         </button>
         <div class="navbar-brand mx-auto">
-          <div v-show="$route.name === 'detalhesPedidos'">Pedido #{{$route.params.id}}</div>
+          <div
+            v-show="
+              $route.name === 'detalhesPedidos' ||
+              $route.name === 'entregaPedido'
+            "
+          >
+            Pedido #{{ $route.params.id }}
+          </div>
           <div v-show="$route.name === 'pedidos'">Pedidos</div>
-          
         </div>
         <button
           class="btn"
@@ -29,6 +55,15 @@ import { RouterView } from "vue-router";
         </button>
       </div>
     </nav>
+    <div
+      v-show="showBanner"
+      class="alert alert-warning"
+      role="alert"
+      style="padding: 0.6rem"
+    >
+      Precisamos de acesso a sua localização
+      <button class="btn-sm btn-success" @click="requestPermission">Permitir acesso</button>
+    </div>
   </header>
   <div
     class="modal fade"
@@ -67,7 +102,7 @@ import { RouterView } from "vue-router";
   </div>
 
   <main class="container">
-    <RouterView />
+    <router-view />
   </main>
 </template>
 

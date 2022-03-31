@@ -1,24 +1,34 @@
-import db from '../../db/db.json'
+import store from "../store"
 
 export default {
-    pegarTodosEmAberto(){
-        return new Promise ((resolve)=>{
-            setTimeout(()=>{
-                resolve(
-                    db.pedidos
-                )
-            }, 2000)
+    pegarTodosEmAberto() {
+        return fetch('http://localhost:8080/pedidos')
+    },
+    pegarPedidoPorId(id) {
+        return fetch(`http://localhost:8080/pedidos/${id}`, {
+            method: 'GET',
+            headers: {
+                Authorization: `Bearer ${store.state.user.token}`
+            }
         })
     },
-    pegarPedidoPorId(id){
-        const pedido = db.pedidos.find((pedido)=>{return pedido.id === Number(id)})
-
-        return new Promise ((resolve)=>{
-            setTimeout(()=>{
-                resolve(
-                    pedido
-                )
-            }, 2000)
+    controlarEntrega(idPedido, body) {
+   
+        return fetch(`http://localhost:8080/pedidos/${idPedido}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body
+        })
+    },
+    enviarLocalizacao(body) {
+        return fetch(`http://localhost:8080/geolocalizacao`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body
         })
     }
 }

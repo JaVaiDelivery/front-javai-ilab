@@ -1,15 +1,14 @@
 export default {
-    login(usuario, senha) {
-        console.log(usuario);
-        console.log(senha);
-        return new Promise((resolve)=>{
-            setTimeout(()=>{
-                resolve({
-                    status: 200,
-                    token: 'sjdgakjshiAGSPjwansdfjsdgbf',
-                    nome: 'Bruno Fernando',
-                })
-            }, 2000)
+    login(email, senha) {
+        return fetch("http://localhost:8080/login", {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                email,
+                senha
+            })
         })
     }
 }

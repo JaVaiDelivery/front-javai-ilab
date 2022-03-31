@@ -3,6 +3,7 @@ import store from '../store'
 import LoginPage from '../pages/LoginPage.vue'
 import ListaPedidosPage from '../pages/ListaPedidosPage.vue'
 import DetalhesPedidoPage from '../pages/DetalhesPedidoPage.vue'
+import RastreamentoPedidoPage from '../pages/RastreamentoPedidoPages.vue'
 
 const routes = [
     {
@@ -11,7 +12,7 @@ const routes = [
         component: LoginPage
     },
     {
-        path: '/',
+        path: '/pedidos',
         name: 'pedidos',
         component: ListaPedidosPage
     },
@@ -20,6 +21,11 @@ const routes = [
         name: 'detalhesPedidos',
         component: DetalhesPedidoPage,
         props: true
+    },
+    {
+        path: '/pedidos/:id/entrega',
+        name: 'entregaPedido',
+        component: RastreamentoPedidoPage
     }
 ]
 
