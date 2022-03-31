@@ -30,7 +30,7 @@
         <div class="input-group mb-3 form-control">
           <input
             :type="showPassword ? 'text' : 'password'"
-            style="border: none; max-width: 90%"
+            class="custom-input"
           />
           <span @click="showPassword = !showPassword">
             <i v-show="!showPassword" class="bi-eye-slash"></i>
@@ -61,8 +61,8 @@ export default {
       loading: false,
       error: false,
       errorMsg: "",
-      email: "fernando@email.com.br",
-      password: "123",
+      email: "",
+      password: "",
     };
   },
   methods: {
@@ -89,4 +89,12 @@ export default {
 </script>
 
 <style scoped>
+  .custom-input {
+    border: none;
+    max-width: 90%;
+  }
+
+  .custom-input:focus {
+    outline: none;
+  }
 </style>
