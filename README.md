@@ -1,35 +1,98 @@
-# front-vue-javai
+<h1 align="center">
+<img src="https://mototurbogoiania.com/wp-content/uploads/2018/03/courier-motoboy-central-moto-boy-freelancer-motoboy-moto-taxi-setor-empresa-de-entregas.png" title="Entregador" />
+</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<h3 align="center">
+  JaVai
+</h3>
 
-## Recommended IDE Setup
+<p align="center">
+  <a href="#sobre o projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#iniciando">Iniciando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#funcionalidades">Funcionalidades</a>
+</p>
+
+## 👨🏻‍💻 Sobre o projeto
+
+- <p style="color: red;">O projeto tem o objetivo de manter todo o histórico de telemetria de um entregador para um determinado pedido. A telemetria é encerrada quando há um evento de conclusão ou cancelamento (por parte do entregador).</p>
+
+Para ver o **Back-end**, clique aqui: [JaVai back-end](https://github.com/JaVaiDelivery/back-javai-ilab)</br>
+
+## ⚙️ Funcionalidades
+Funcionalidades que o sistema oferece:
+- Autenticação do entregador
+- Consulta de pedidos em eberto
+- Atribuição de pedido pelo entregador
+- Alteração de status do pedido (EM_ABERTO/EM_ROTA/CONCLUIDO)
+- Consulta de geolocalização do entregador
+- Criptografia de senhas
+- Validação de requisições
+- Documentação dos endpoints
+- Mensagens de erro customizadas *user friendly*
+
+## 🚀 Tecnologias
+
+Tecnologias que utilizamos para desenvolver esta API Rest:
+
+- [Node.js](https://nodejs.org/)
+- [Vue.js](https://vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Popper.js](https://popper.js.org/)
+- [Vite.js](https://vitejs.dev/)
+
+## 💻 Desenvolvedores
+- [Alessandra Lamas Luisi](https://github.com/alluisi)
+- [Alessandro Costa](https://github.com/ab-costa)
+- [Jessica Xavier](https://github.com/jfsax)
+- [Rebeca Ferreira](https://github.com/rvsfrebeca1)
+- [Talita de Almeida](https://github.com/TalitaCarvalho)
+
+## 💻 Iniciando
+
+- As instruções a seguir irão te guiar para que você crie uma cópia do projeto na sua máquina local.
+
+### Pré-requisitos
+
+- Siga as orientações do README do repositório [Back-end](https://github.com/JaVaiDelivery/back-javai-ilab)
+
+**Clone o projeto e acesse a pasta**
+
+```bash
+$ git clone https://github.com/JaVaiDelivery/front-javai-ilab && cd front-javai-ilab
+```
+
+**Configuração de IDE recomendada**
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-## Customize configuration
+**Personalizar configuração**
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Consulte [Referência de configuração do Vite](https://vitejs.dev/config/).
 
-## Project Setup
+**Configuração do projeto**
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+**Compilação e Hot-Reload para desenvolvimento**
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+**Compilar e Minify para Produção**
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+**Lint com [ESLint](https://eslint.org/)**
 
 ```sh
 npm run lint
 ```
+
+Para acessar o projeto diretamente no seu browser, acesse https://javai.netlify.app/
