@@ -3,7 +3,7 @@ const BASE_URL = import.meta.env.VITE_API
 
 export default {
     pegarTodosEmAberto() {
-        return fetch(`${BASE_URL}/pedidos`,{
+        return fetch(`${BASE_URL}/pedidos`, {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${store.state.user.token}`
