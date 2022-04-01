@@ -71,5 +71,22 @@ export default {
         } catch (error) {
             return { error }
         }
+    },
+
+    async pegarRota(origem, destino) {
+        try {
+            const response = await PedidoService.pegarRota(origem, destino)
+            const result = await response.json()
+            if (response.status === 200) {
+                return { data: result.routes[0].overview_polyline.points }
+            }
+
+            return {
+                error: 'Não foi possível calcular a rota'
+            }
+        } catch (error) {
+            console.error(error)
+            return { error }
+        }
     }
 }

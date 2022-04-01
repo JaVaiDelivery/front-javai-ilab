@@ -38,5 +38,8 @@ export default {
             },
             body
         })
+    },
+    pegarRota(origem, destino) {
+        return fetch(`https://maps.googleapis.com/maps/api/directions/json?destination=${destino}&origin=${origem}&mode=driving&key=${import.meta.env.VITE_MAPS_KEY}`)
     }
 }

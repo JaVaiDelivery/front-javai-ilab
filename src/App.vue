@@ -101,7 +101,7 @@ export default {
     </div>
   </div>
 
-  <main class="container">
+  <main>
     <router-view />
   </main>
 </template>
