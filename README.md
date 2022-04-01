@@ -22,7 +22,7 @@ Para ver o **Back-end**, clique aqui: [JaVai back-end](https://github.com/JaVaiD
 ## ⚙️ Funcionalidades
 Funcionalidades que o sistema oferece:
 - Autenticação do entregador
-- Consulta de pedidos em eberto
+- Consulta de pedidos em aberto
 - Atribuição de pedido pelo entregador
 - Alteração de status do pedido (EM_ABERTO/EM_ROTA/CONCLUIDO)
 - Consulta de geolocalização do entregador
@@ -43,11 +43,11 @@ Tecnologias que utilizamos para desenvolver esta API Rest:
 - [Vite.js](https://vitejs.dev/)
 
 ## 💻 Desenvolvedores
-- [Alessandra Lamas Luisi](https://github.com/alluisi)**Back-end/Front-end**
-- [Alessandro Costa](https://github.com/ab-costa)**Back-end**
-- [Jessica Xavier](https://github.com/jfsax)**Back-end/Front-end**
-- [Rebeca Ferreira](https://github.com/rvsfrebeca1)**Back-end**
-- [Talita de Almeida](https://github.com/TalitaCarvalho)**Front-end**
+- [Alessandra Lamas Luisi](https://github.com/alluisi) **(Back-end/Front-end)**
+- [Alessandro Costa](https://github.com/ab-costa) **(Back-end)**
+- [Jessica Xavier](https://github.com/jfsax) **(Back-end/Front-end)**
+- [Rebeca Ferreira](https://github.com/rvsfrebeca1) **(Back-end)**
+- [Talita de Almeida](https://github.com/TalitaCarvalho) **(Front-end)**
 
 ## 💻 Iniciando
 
