@@ -43,11 +43,11 @@ Tecnologias que utilizamos para desenvolver esta API Rest:
 - [Vite.js](https://vitejs.dev/)
 
 ## 💻 Desenvolvedores
-- [Alessandra Lamas Luisi](https://github.com/alluisi)
-- [Alessandro Costa](https://github.com/ab-costa)
-- [Jessica Xavier](https://github.com/jfsax)
-- [Rebeca Ferreira](https://github.com/rvsfrebeca1)
-- [Talita de Almeida](https://github.com/TalitaCarvalho)
+- [Alessandra Lamas Luisi](https://github.com/alluisi)**Back-end/Front-end**
+- [Alessandro Costa](https://github.com/ab-costa)**Back-end**
+- [Jessica Xavier](https://github.com/jfsax)**Back-end/Front-end**
+- [Rebeca Ferreira](https://github.com/rvsfrebeca1)**Back-end**
+- [Talita de Almeida](https://github.com/TalitaCarvalho)**Front-end**
 
 ## 💻 Iniciando
 
